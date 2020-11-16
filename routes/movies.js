@@ -46,7 +46,7 @@ router.put('/', (req, res) => {
             actors : response.data.Actors,
             poster: response.data.Poster,
             boxOffice: response.data.BoxOffice,
-            rottenTomatoesScore: _.find(response.data.Ratings,["Source","Rotten Tomatoes"]).Value,
+            rottenTomatoesScore: 0, //_.find(response.data.Ratings,["Source","Rotten Tomatoes"]).Value,
         } 
     ) } );
     
