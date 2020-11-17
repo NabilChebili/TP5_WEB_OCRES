@@ -12,7 +12,7 @@ var http = require('http');
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3001');
+var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
 /**
@@ -88,36 +88,3 @@ function onListening() {
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
 }
-
-/**
-*
-*/
-
-const axios = require('axios')
-const config = {
-  port: 3001
-};
-
-(async function() {
-  await axios.put(`http://localhost:${config.port}/movies`, {
-       movie:"Arthur",
-    })
-   await axios.put(`http://localhost:${config.port}/movies`, {
-       movie:"Terminator",
-    })
-   await axios.put(`http://localhost:${config.port}/movies`, {
-       movie:"Avengers",
-    })
-   await axios.put(`http://localhost:${config.port}/movies`, {
-       movie:"OSS",
-    })
-   await axios.put(`http://localhost:${config.port}/movies`, {
-       movie:"Asterix",
-    })
-   await axios.put(`http://localhost:${config.port}/movies`, {
-       movie:"007",
-    })
-   await axios.put(`http://localhost:${config.port}/movies`, {
-       movie:"Black",
-    })
-})();

@@ -6,11 +6,20 @@ var apikey = 'd1e4c50a';
 // Lodash utils library
 const _ = require('lodash');
 
-let movies = []
+let movies = [{
+        movie:"arthur",
+        id:"0",
+        YearOfRelease:"0",
+        duration : 0,
+        actors : [],
+        poster: "",
+        boxOffice: 10,
+        rottenTomatoesScore: 10,
+    },
+]
   
 /* GET users listing. */
 router.get('/', (req, res) => {
-	res.header("Access-Control-Allow-Origin", "*");
     res.status(200).json({movies});
   });
   
